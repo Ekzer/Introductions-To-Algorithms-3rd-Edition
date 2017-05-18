@@ -8,21 +8,13 @@
 
 std::list<int>  BinaryAdd(const std::vector<int> &nb1, const std::vector<int> &nb2)
 {
-    std::list<int>     result;
-    int      carry = 0, res;
-    for (int j = (int)nb1.size() - 1; j >= -1; j--) {
-        if (carry && j == -1) {
-            result.push_front(carry);
-            break;
-        }
-        res = nb1[j] + nb2[j] + carry;
-        carry = 0;
-        if (res > 1) {
-            carry = 1;
-            res %= 2;
-        }
-        result.push_front(res);
+    std::list<int>      result;
+    int                 carry = 0;
+    for (int j = (int)nb1.size() - 1; j > -1; j--) {
+        result.push_front((nb1[j] + nb2[j] + carry) % 2);
+        carry = (nb1[j] + nb2[j] + carry) / 2;
     }
+    result.push_front(carry);
     return result;
 }
 
