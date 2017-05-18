@@ -6,13 +6,13 @@
 #include <list>
 #include <iostream>
 
-int     *BinaryAdd(const std::vector<int> &nb1, const std::vector<int> &nb2)
+std::list<int>  BinaryAdd(const std::vector<int> &nb1, const std::vector<int> &nb2)
 {
-    int*     result = new int[nb1.size()+1];
+    std::list<int>     result;
     int      carry = 0, res;
     for (int j = (int)nb1.size() - 1; j >= -1; j--) {
         if (carry && j == -1) {
-            result[j+1] = carry;
+            result.push_front(carry);
             break;
         }
         res = nb1[j] + nb2[j] + carry;
@@ -21,18 +21,18 @@ int     *BinaryAdd(const std::vector<int> &nb1, const std::vector<int> &nb2)
             carry = 1;
             res %= 2;
         }
-        result[j+1] = res;
+        result.push_front(res);
     }
     return result;
 }
 
-std::ostream        &operator<<(std::ostream &os, const int *tab) {
-    int size = (sizeof(tab) / sizeof(tab[0]));
-    for (int i = 0; i< size; i++) {
-        os << tab[i];
+std::ostream    &operator<<(std::ostream &os, const std::list<int> &list) {
+    for (auto &item: list) {
+        os << item;
     }
     return os;
 }
+
 int main() {
     const std::vector<int> nb1 = {1,1,0,0,1,1,1}; // 103
     const std::vector<int> nb2 = {1,1,0,0,1,0,0}; // 100
