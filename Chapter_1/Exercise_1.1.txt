@@ -1,0 +1,19 @@
+1 : Say we have a book shop.
+Naturally, the books are memorized in a database.
+If I want to reorganize my shop, for example by author name, I need to sort all my books rapidly to follow the results and accomplish it.
+So the efficiency of a sorting algorithm is very important.
+
+2 : We can take the memory consumption for example.
+
+3 : Array.
+ Pros : - Direct access to element
+        - Lower memory consumption than a list
+        - Faster iteration than a list
+ Cons : - Adding new element or deleting one is not possible without huge operations (resizing, etc..)
+
+4 : They are similar because it treats on the problem of reducing company's costs for example. Technically, both are optimization problems.
+The main difference is that the short path algorithms are well-known and efficient. That's not the case for the traveling-salesman problem.
+
+5 :
+Nowadays, we very often use search engines (like Google, Bing...) to find what we want on internet. These search engines need huge and fast search algorithms. That's the best solution for this.
+
