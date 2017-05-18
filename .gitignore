@@ -1,0 +1,5 @@
+cmake-build-debug/
+cmake-build-release/
+main.cpp
+CMakeLists.txt
+Chapter_1/CMakeLists.txt
