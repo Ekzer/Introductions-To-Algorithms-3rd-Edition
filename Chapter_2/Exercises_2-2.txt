@@ -1,0 +1,19 @@
+2-2.1 :
+
+f(n) = n^3/1000 - 100n^2 - 100n + 3
+We only consider the leading term : n^3
+O-notation : O(n^3)
+
+2-2.2 :
+
+@see SelectionSort.cpp
+
+2-2.3 :
+
+Linear search's complexity : O(n)
+The average case = worst case = O(n) because we have to loop until we find the element.
+The loop costs in any case a constant time to do.
+
+2-2.4 :
+
+We could check previously if the sequence is already treated and good. It would skip many useless steps and return directly the sequence
