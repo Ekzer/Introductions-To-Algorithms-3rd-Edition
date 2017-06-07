@@ -26,7 +26,6 @@ std::ostream    &operator<<(std::ostream &os, const std::vector<int> &list)
  */
 std::vector<int>        &_Merge(std::vector<int> &A, size_t p, size_t q, size_t r)
 {
-    std::cout << "CALL p: " << p << " & q: " << q << " & r: " << r << std::endl;
     size_t  n1 = (q - p),
             n2 = (r - q),
             i = 0,
